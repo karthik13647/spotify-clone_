@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <link rel="icon" href="./assets/logo.png" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="sidebar">
+        <div class="nav">
+          <div class="nav-options-logo" style="opacity: 1">
+            <i class="fa-brands fa-spotify" style="color: rgb(15, 223, 50); font-size: 2em"></i>
+            <a href="#" style="color: rgb(15, 223, 50); font-size: 1.5em"><b>Spotify </b></a>
+          </div>
+          <div class="nav-options" style="opacity: 1">
+            <i class="fa-solid fa-house"></i>
+            <a href="#"> Home </a>
+          </div>
+          <div class="nav-options">
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            <a href="#"> Search</a>
+          </div>
+        </div>
+        <div class="library">
+          <div class="options">
+            <div class="library-options nav-options">
+              <img src="./assets/library_icon.png" />
+              <a href="#"> Your Library </a>
+            </div>
+            <div class="icons">
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="library-boxes">
+            <div class="box">
+              <p class="box-p1">Create your first playlist</p>
+              <p class="box-p2">It's easy, we'll help you</p>
+              <button class="badge">Create Playlist</button>
+            </div>
+            <div class="box">
+              <p class="box-p1">Let's find some podcasts to follow</p>
+              <p class="box-p2">We'll keep you updated on new episodes</p>
+              <button class="badge">Browse Podcasts</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="sticky-nav">
+          <div class="sticky-nav-icons">
+            <img src="./assets/backward_icon.png" />
+            <img src="./assets/forward_icon.png" class="hide" />
+          </div>
+          <div class="sticky-nav-options">
+            <button class="badge nav-item">Explore Premium</button>
+            <button class="badge nav-item dark-badge">
+              <i class="fa-regular fa-circle-down" style="margin-right: 5px"></i
+              >Install App
+            </button>
+            <i class="fa-solid fa-user nav-item"></i> 
+          </div>
+        </div>
+
+
+        <h2>Recently Played</h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="./assets/whispers.webp" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/whispers.mp3"></audio>
+            <p class="card-title">Wanna Be Yours...</p>
+            <p class="card-info">
+              Instrumental beats for a restful sleep.</p>
+          </div>
+          <div class="card">
+            <img src="./assets/Kalki.webp" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/kalki.mp3"></audio>
+            <p class="card-title">Kalki 2898 AD</p>
+            <p class="card-info">Beyond Your Imagination...!</p>
+          </div>
+          <div class="card">
+            <img src="./assets/card1img.jpeg" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/top_global.mp3"></audio>
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Peace of Global...!</p>
+          </div>
+          <div class="card">
+            <img src="./assets/Butta_Bomma.webp" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/ButtaBomma.mp3"></audio>
+            <p class="card-title">ButtaBomma</p>
+            <p class="card-info">Mood Always Changes to this song</p>
+          </div>
+          
+          <div class="card">
+            <img src="./assets/rain_songs.webp" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/rain_song.mp3"></audio>
+            <p class="card-title">Rainy Night</p>
+            <p class="card-info">Everybody get in the Rain....</p>
+          </div>
+          <div class="card">
+            <img src="./assets/fear_song.webp" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/Fear_song.mp3"></audio>
+            <p class="card-title">Devara</p>
+            <p class="card-info">Man of Masses</p>
+          </div>
+          <div class="card">
+            <img src="./assets/Illuminat.webp" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/Illuminati.mp3"></audio>
+            <p class="card-title">Illuminati</p>
+            <p class="card-info">Language is not the barrier to Vibe</p>
+          </div>  
+        </div>
+        <!-- <div class="footer">
+          <div class="line"></div>
+        </div> -->
+        
+
+
+        <h2>Trending Near you now</h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="./assets/card5img.jpeg" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/top_50.mp3"></audio>
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Soothing, minimalist ambient for deep sleep.</p>
+          </div>
+          <div class="card">
+            <img src="./assets/aasa koda.webp" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/Aasa Kooda.mp3"></audio>
+            <p class="card-title">Aasa Kooda</p>
+            <p class="card-info">Why not Private Songs...</p>
+          </div>
+          <div class="card">
+            <img src="./assets/card4img.jpeg" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/leo.mp3"></audio>
+            <p class="card-title">LEO</p>
+            <p class="card-info">Mass fire of the Thalapathy...</p>
+          </div>
+          <div class="card">
+            <img src="./assets/card2img.jpeg" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/Mudhal-Nee-Mudivum-Nee.mp3"></audio>
+            <p class="card-title">Mudhal Nee Mudivum Nee</p>
+            <p class="card-info">You are the Sea and Sea shore...</p>
+          </div>
+          <div class="card">
+            <img src="./assets/card6img.jpeg" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/ram_sita.mp3"></audio>
+            <p class="card-title">Top 50 - Devotional</p>
+            <p class="card-info">Creation of GOD...</p>
+          </div>
+          <div class="card">
+            <img src="./assets/OG.webp" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/OG.mp3"></audio>
+            <p class="card-title">Hungry Cheetah</p>
+            <p class="card-info">Original Gangster...</p>
+          </div>
+          <div class="card">
+            <img src="./assets/cat1.jpeg" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/top_50 90's.mp3"></audio>
+            <p class="card-title">Top 50 - 90's</p>
+            <p class="card-info">Your daily updates of the most played....</p>
+          </div>
+          <div class="card">
+            <img src="./assets/animal.jpeg" class="card-image" />
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/animal.mp3"></audio>
+            <p class="card-title">Animal</p>
+            <p class="card-info">Love is twisted than Anything...</p>
+          </div>
+          
+        </div>
+        <h2>Popular Artist</h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="assets/Sid-Sriram.jpeg" class="card-image-round" />
+            <p class="card-title-round">Sid Sriram</p>
+            <p class="card-info-round">Artist</p>
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/sid_sriram.mp3"></audio>
+          </div>
+            <div class="card">
+              <img src="assets/ajith.jpeg" class="card-image-round" />
+              <p class="card-title-round">Ajith Singh</p>
+              <p class="card-info-round">Artist</p>
+              <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/ajith_singh.mp3"></audio>
+            </div>
+            
+              <div class="card">
+                <img src="assets/anirudh.jpeg" class="card-image-round" />
+                <p class="card-title-round">Anirudh</p>
+                <p class="card-info-round">Artist</p>
+                <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/anirudh.mp3"></audio>
+              </div>
+              
+                <div class="card">
+                  <img src="assets/rahman.jpeg " class="card-image-round" />
+                  <p class="card-title-round">A.R Rahman</p>
+                  <p class="card-info-round">Artist</p>
+                  <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/ar_rahman.mp3"></audio>
+                </div>
+                <div class="card">
+                  <img src="./assets/shreya.jpeg" class="card-image-round" />
+                  <p class="card-title-round">Shreya ghoshal</p>
+                  <p class="card-info-round">Artist</p>
+                  <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/shreya.mp3"></audio>
+                </div>
+                
+                </div>
+        <h2>Featured Charts</h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="./assets/global_3.webp" class="card-image" />
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your weekly update of most played tracks right now - Global.</p>
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/global_1.mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="assets/global 3.jpeg" class="card-image" />
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Gentle Ambient piano to help you fall asleep....</p>
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/Hope_global_2.mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="assets/global4.jpeg" class="card-image" />
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your daily update of the most viral tracks right now - Global.</p>
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/global_4.mp3"></audio>
+          </div>
+          <div class="card">
+            <img src="assets/global_2.jpg" class="card-image" />
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">
+              Your daily update of the most viral tracks right now - USA.</p>
+            <div class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <audio id="mySong" src="audios/global_5.mp3"></audio>
+          </div>
+        </div>
+        <!-- <div class="footer-line">
+          <div class="line"></div>
+        </div> -->
+        <footer class="footer">
+          <div class="footer-column">
+              <h4>Company</h4>
+              <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Jobs</a></li>
+                  <li><a href="#">For the Record</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h4>Communities</h4>
+              <ul>
+                  <li><a href="#">For Artists</a></li>
+                  <li><a href="#">Developers</a></li>
+                  <li><a href="#">Advertising</a></li>
+                  <li><a href="#">Investors</a></li>
+                  <li><a href="#">Vendors</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h4>Useful links</h4>
+              <ul>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Free Mobile App</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h4>Spotify Plans</h4>
+              <ul>
+                  <li><a href="#">Premium Individual</a></li>
+                  <li><a href="#">Premium Duo</a></li>
+                  <li><a href="#">Premium Family</a></li>
+                  <li><a href="#">Premium Student</a></li>
+                  <li><a href="#">Spotify Free</a></li>
+              </ul>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2024 Spotify AB</p>
+            </div>
+        </div>
+      </footer>
+      
+      </div>
+      <!-- <div class="music-player">
+        <div class="album">
+          <img src="./assets/album_picture.jpeg" class="album-picture" />
+          <div class="album-para">
+            <p class="para1">David</p>
+            <p class="para2">Anil Kapoor</p>
+          </div>
+          <div class="album-images">
+            <img src="./assets/album_icon1.png" class="album-icon" />
+            <img src="./assets/album_icon2.png" class="album-icon" />
+          </div>
+        </div>
+        <div class="player">
+          <div class="playback-bar">
+            <span class="current-time"> 00:00 </span>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              class="progress-bar"
+              step="1"
+            />
+            <span class="end-time"> 03:36</span>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

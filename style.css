@@ -1,0 +1,761 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow-y: scroll;
+}
+
+.main{
+    display: flex;
+    min-height: 100vh; 
+    padding: 0.5rem;
+    flex-direction: column; /* Add this for mobile layout */
+}
+
+.sidebar{
+    background-color: #000;
+    width: 100%; /* Change to 100% for mobile layout */
+    border-radius: 1rem; /* 1rem = 16px; */ 
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem; /* Add this for mobile layout */
+}
+
+@media (min-width: 768px) {
+    .sticky-nav {
+        position: fixed;
+        top: 0;
+    }
+    .sidebar > .nav {
+        width: 100%;
+        position: fixed;
+        top: 0;
+    }
+    .sidebar > .library {
+        position: fixed;
+        top: 150px;
+    }
+}
+
+.main-content{
+    width: 100%;
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    padding: 0 1.5rem 0 1.5rem; 
+}
+
+.music-player{
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;    
+}
+
+.nav{
+    background-color: #121212;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 2rem 1.5rem;
+}
+
+.nav-options-logo{
+    line-height: 2.5rem;
+    opacity: 0.7;
+    font-size: 17px;
+    padding: 0.1rem 0.75rem;
+}
+
+.nav-options{
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.1rem 0.75rem;
+}
+
+.nav-options:hover{
+    opacity: 1;
+}
+
+.nav-options i{
+    font-size: 1rem;
+}
+
+.nav-options a{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+/* Add media queries for mobile responsiveness */
+
+@media (min-width: 768px) {
+    .main {
+        flex-direction: row; /* Change to row for desktop layout */
+    }
+    .sidebar {
+        width: 340px; /* Change to fixed width for desktop layout */
+        margin-bottom: 0; /* Remove margin bottom for desktop layout */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        padding: 1rem 1rem; /* Reduce padding for mobile layout */
+    }
+    .nav-options-logo {
+        font-size: 15px; /* Reduce font size for mobile layout */
+    }
+    .nav-options {
+        font-size: 15px; /* Reduce font size for mobile layout */
+    }
+}
+
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.library-options img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons{
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover{
+    opacity: 1;
+}
+
+.box{
+    height: 8rem;
+    background-color: #232323;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0 1.75rem 0;
+    padding: 0.75rem  1rem;
+}
+
+.box-p1{
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+    
+}
+
+.badge{
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+
+.dark-badge{
+    background-color: #000;
+    color: #fff;
+}
+
+.sticky-nav{
+    position: relative;
+    width: 100%;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;
+}
+
+.sticky-nav-icons img{
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item{
+    margin-right: 1rem;
+}
+
+
+
+/* Add media queries for mobile responsiveness */
+
+@media(max-width:768px){
+    .library{
+        padding: 0.5rem 0.5rem;
+    }
+    .options{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .icons{
+        font-size: 1rem;
+    }
+    .box{
+        height: 7rem;
+        padding: 0.5rem 0.75rem;
+    }
+    .box-p1{
+        font-size: 0.9rem;
+    }
+    .box-p2{
+        font-size: 0.8rem;
+    }
+    .badge{
+        padding: 0.2rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    .sticky-nav{
+        padding: 0.5rem 0 0.5rem 0;
+    }
+    .sticky-nav-icons img{
+        margin-left: 0.5rem;
+        height: 1rem;
+        width: 1rem;
+    }
+    .nav-item{
+        margin-right: 0.5rem;
+    }
+}
+
+@media(max-width:480px){
+    .library{
+        padding: 0.2rem 0.2rem;
+    }
+    .options{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .icons{
+        font-size: 0.8rem;
+    }
+    .box{
+        height: 6rem;
+        padding: 0.2rem 0.5rem;
+    }
+    .box-p1{
+        font-size: 0.8rem;
+    }
+    .box-p2{
+        font-size: 0.7rem;
+    }
+    .badge{
+        padding: 0.1rem 0.6rem;
+        font-size: 0.7rem;
+    }
+    .sticky-nav{
+        padding: 0.2rem 0 0.2rem 0;
+    }
+    .sticky-nav-icons img{
+        margin-left: 0.2rem;
+        height: 0.8rem;
+        width: 0.8rem;
+    }
+    .nav-item{
+        margin-right: 0.2rem;
+    }
+}
+
+.card {
+    background-color: #121212;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease-in-out;
+    position: relative; /* add this */
+  }
+  
+ .card:hover {
+    background-color: #232323;
+  }
+  .card:hover > .play-btn,
+  .card.active > .play-btn {
+    display: flex;
+  }
+
+  .play-btn {
+    width: 45px;
+    height: 45px;
+    background-color: rgb(15, 223, 50);
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #212121;
+    font-size: 1.15em;
+    line-height: 45px;
+    position: absolute;
+    right: 0;
+    top: 6.5em;
+  }
+  
+
+.card-global{
+    background-color: #121212;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #121212;
+
+
+}
+.card-image-round{
+    width: 100%;
+    border-radius: 7rem;
+    display:flex;
+}
+.card-title-round{
+    justify-content: start;
+    align-items: center;
+    display:flex;
+}
+.card-info-round{
+    font-size: 0.85rem;
+    opacity: 0.7 ;
+    justify-content: start;
+    align-items: center;
+    display:flex;
+}
+
+.card-image{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-title{
+    font-weight: 600;
+}
+
+.card-info {
+    font-size: 0.85rem;
+    opacity: 0.7 ;
+}
+
+.footer-line{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.line{
+    width: 90%;
+    height:100%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+/* General footer styling */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.footer-column {
+    width: 20%;
+}
+
+.footer-column h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Social media icons styling */
+.footer-social {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+/* Additional styles to match the footer layout */
+.footer {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+/* 
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+} */
+
+.footer-copyright {
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.footer-social a:hover {
+    color: #1DB954; /* Change to a Spotify-like green color on hover */
+}
+
+/* Font Awesome for Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-social {
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Add media queries for mobile responsiveness */
+
+@media(max-width:768px){
+   .card {
+        width: 120px;
+        margin-left: 1rem;
+    }
+   .card-image-round{
+        border-radius: 5rem;
+    }
+   .card-title-round{
+        font-size: 0.9rem;
+    }
+   .card-info-round{
+        font-size: 0.8rem;
+    }
+   .footer{
+        height: 200px;
+    }
+   .line{
+        width: 80%;
+        height: 20%;
+    }
+}
+
+@media(max-width:480px){
+   .card {
+        width: 100px;
+        margin-left: 0.5rem;
+    }
+   .card-image-round{
+        border-radius: 3rem;
+    }
+   .card-title-round{
+        font-size: 0.8rem;
+    }
+   .card-info-round{
+        font-size: 0.7rem;
+    }
+   .footer{
+        height: 150px;
+    }
+   .line{
+        width: 70%;
+        height: 15%;
+    }
+}
+
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album{
+    width: 25%;
+}
+
+.player{
+    width: 50%;
+}
+
+.controls{
+    width: 25%;
+}
+
+.player-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-icon{
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+
+.player-control-icon:hover{
+    opacity: 1;
+}
+
+
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.25rem;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+
+
+.album{
+    display: flex;
+    padding: 1.5rem;
+    width: 25%;
+    align-items: center;
+}
+
+
+.album-picture{
+    display: flex;
+    height: 3.5rem;
+    width: 3rem;
+    margin-top: 1rem;
+    padding: 1.75rem;
+    padding-left: 4px;
+}
+
+
+.album-para{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.para1{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.para2{
+    margin-top: -8px;
+    font-size: 0.7rem;
+    opacity: 0.6;
+}   
+
+.album-icon{ 
+        height: 1.5rem;
+        width: 1.4rem;
+        margin-top: 10px;
+        margin-left: 15px;
+        padding-left: 10px;
+}
+   
+.player{
+    width: 50%;
+}
+
+.controls{
+    width: 25%;
+}
+
+.music-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-player-icon{
+    height: 1.5rem;
+    margin-right: 0.75rem;
+    opacity: 0.7;
+}
+
+/* Add media queries for mobile responsiveness */
+
+@media(max-width:768px){
+   .album{
+        width: 30%;
+    }
+   .player{
+        width: 40%;
+    }
+   .controls{
+        width: 30%;
+    }
+   .album-picture{
+        height: 2.5rem;
+        width: 2rem;
+    }
+   .album-icon{
+        height: 1rem;
+        width: 0.9rem;
+    }
+   .control-player-icon{
+        height: 1rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@media(max-width:480px){
+   .album{
+        width: 40%;
+    }
+   .player{
+        width: 30%;
+    }
+   .controls{
+        width: 30%;
+    }
+   .album-picture{
+        height: 2rem;
+        width: 1.5rem;
+    }
+   .album-icon{
+        height: 0.8rem;
+        width: 0.7rem;
+    }
+   .control-player-icon{
+        height: 0.8rem;
+        margin-right: 0.3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
